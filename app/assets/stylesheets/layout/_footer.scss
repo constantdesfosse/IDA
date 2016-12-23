@@ -1,1 +1,28 @@
-// Your footer style
+$gold: #9c8e65;
+$darkgrey : #505050;
+$whitegold : #f1e5c3;
+
+#main-footer {
+  padding: 2.5em 5%;
+  border-top: 1px solid $whitegold;
+
+  .copyright {
+    float: left;
+    color: $gold;
+    font-size: .7em;
+    margin-top: -5px;
+  }
+
+  nav {
+    float: right;
+    margin-top: -10px;
+
+    a {
+      color: $gold;
+      font-size: 1em;
+      text-decoration: none;
+      transition: 1s;
+      margin: 0 .5rem;
+    }
+  }
+}
