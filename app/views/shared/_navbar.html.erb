@@ -3,11 +3,21 @@
     <%= image_tag "Logosanstexte.png" %>
   <% end %></a>
     <nav>
-      <a href="#">Accueil</a>
-      <a href="#">Projets</a>
-      <a href="#">Préstations</a>
-      <a href="#">Philosophie</a>
-      <a href="#">Contact</a>
+      <%= link_to "/" do %>
+        <i class="fa fa-home"></i>  <%= t ".profile", default: "Accueil" %>
+      <% end %>
+      <%= link_to projets_path do %>
+        <i class="fa fa-book"></i> <%= t ".", default: "Projets" %>
+      <% end %>
+      <%= link_to prestations_path do %>
+        <i class="fa fa-paper-plane"></i> <%= t ".", default: "Préstations" %>
+      <% end %>
+       <%= link_to philosophie_path do %>
+        <i class="fa fa-spinner"></i> <%= t ".", default: "Philosophie" %>
+      <% end %>
+      <%= link_to contact_path do %>
+        <i class="fa fa-envelope"></i> <%= t ".", default: "Contact" %>
+      <% end %>
     <nav>
 </header>
 </div>

@@ -23,6 +23,10 @@ $whitegold : #f1e5c3;
       transition: 1s;
       margin: 0 1rem;
 
+      i {
+        margin-right: 0.5rem
+      }
+
       &:hover{
         color: $darkgrey;
         transition: 1s;
