@@ -2,10 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
+
   get 'projets' => 'pages#projets'
   get 'prestations' => 'pages#prestations'
   get 'philosophie' => 'pages#philosophie'
-  get 'contact' => 'pages#contact'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
