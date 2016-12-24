@@ -3,9 +3,6 @@
     <%= image_tag "Logosanstexte.png" %>
   <% end %></a>
     <nav>
-      <%= link_to "/" do %>
-        <i class="fa fa-home"></i>  <%= t ".profile", default: "Accueil" %>
-      <% end %>
       <%= link_to projets_path do %>
         <i class="fa fa-book"></i> <%= t ".", default: "Projets" %>
       <% end %>
