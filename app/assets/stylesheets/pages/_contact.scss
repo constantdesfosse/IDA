@@ -1,0 +1,40 @@
+$gold: #9c8e65;
+$darkgrey : #505050;
+$whitegold : #f1e5c3;
+
+.container-contact {
+  padding: 5%;
+  font-family: 'Raleway', sans-serif;
+  padding: 0 30% 0;
+  padding-bottom: 4%;
+  padding-top: 5%;
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  min-height: calc(100vh - 162px);
+
+  & h3 {
+    margin-bottom: 5%;
+  }
+
+}
+
+abbr[title="required"] {
+  display: none;
+}
+
+.btn-send {
+  border-style: 1px solid;
+  border-color: $whitegold;
+  font-family: 'Raleway', sans-serif;
+}
+
+.form-control {
+  border-color: $whitegold;
+  box-shadow: none;
+}
+
+label {
+    padding-bottom: 3%;
+
+}

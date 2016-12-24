@@ -3,7 +3,7 @@ $darkgrey : #505050;
 $whitegold : #f1e5c3;
 
 .wrapper-home {
-  min-height: 90vh;
+  height: calc(100vh - 81px);
   background-size: cover;
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@ $whitegold : #f1e5c3;
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: -81px;
+  margin-bottom: -162px;
 }
 
 html, body {
