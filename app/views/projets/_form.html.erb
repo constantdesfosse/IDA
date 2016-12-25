@@ -1,7 +1,9 @@
-<div class="container" id="homepage">
-  <div class="row" style="margin-top: 15px">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <% if @projet.errors.any? %>
+<div class="container-contact">
+
+  <div align="center">
+    <h3>Editer le projet "<%= @projet.title %>"</h3>
+
+     <% if @projet.errors.any? %>
         <ul>
           <%@projet.errors.full_messages.each do |message| %>
             <li><%= message %></li>
@@ -9,11 +11,11 @@
         </ul>
       <% end %>
       <%= simple_form_for @projet do |f| %>
-        <%= f.input :title, label: "Le titre de ton projet", input_html: { placeholder: "Ocean view..." } %>
-        <%= f.input :description, label: "La description de ton projet", input_html: { placeholder: "Situé à La Baule, cette maison..." } %>
-        <%= f.input :city, label: "La ville de ton projet", input_html: { placeholder: "La Baule" } %>
-        <%= f.submit class: "btn btn-primary" %>
+        <%= f.input :title, label: "Titre du projet", input_html: { placeholder: "Ocean view..." } %>
+        <%= f.input :description, label: "Description du projet", input_html: { placeholder: "Situé à La Baule, cette maison..." } %>
+        <%= f.input :city, label: "Ville du projet", input_html: { placeholder: "La Baule" } %>
+        <%= f.button :submit, 'Mettre à jour', :class=> "btn-send" %>
       <% end %>
-    </div>
   </div>
+
 </div>

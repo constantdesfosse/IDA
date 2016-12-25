@@ -4,6 +4,7 @@
       <h3><%=projet.title.chars.take(22).join + "..."  %></h3>
     <% else %>
     <h3><%=projet.title %></h3>
+    <h3><%=projet.city %></h3>
     <%end%>
     <p><%=projet.created_at.strftime("%m/%d/%Y")%></p>
     <p><%=projet.description%></p>
