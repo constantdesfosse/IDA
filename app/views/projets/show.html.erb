@@ -1,8 +1,8 @@
-<div>
+<div class="container">
   <h1><%= @projet.title %></h1>
   <p><%= @projet.description %></p>
   <p><%= @projet.city %></p>
-</div>
 
-<%= link_to "Editer", edit_projet_path(@projet) %>
-<%= link_to "Effacer", projet_path(@projet), method: :delete, data: { confirm: "Anthony ? T'es sur de vouloir l'effacer ?"} %>
+  <%= link_to "Editer", edit_projet_path(@projet) %>
+  <%= link_to "Effacer", projet_path(@projet), method: :delete, data: { confirm: "Anthony ? T'es sur de vouloir l'effacer ?"} %>
+</div>
