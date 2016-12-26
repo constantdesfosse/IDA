@@ -11,6 +11,7 @@
     <%= f.input :title, label: "Titre du projet", input_html: { placeholder: "Ocean view..." } %>
     <%= f.input :description, label: "Description du projet", input_html: { placeholder: "Situé à La Baule, cette maison..." } %>
     <%= f.input :city, label: "Ville du projet", input_html: { placeholder: "La Baule" } %>
+    <%= f.input :photo, as: :attachinary %>
     <%= f.button :submit, 'Créer', :class=> "btn-send" %>
     <% end %>
   </div>

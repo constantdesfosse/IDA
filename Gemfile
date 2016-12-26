@@ -18,6 +18,10 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'sendgrid-ruby'
+gem 'cloudinary', '1.1.0'
+gem "attachinary", github: "assembler/attachinary"
+gem "jquery-fileupload-rails"
+gem "coffee-rails"
 
 group :development, :test do
   gem 'binding_of_caller'
