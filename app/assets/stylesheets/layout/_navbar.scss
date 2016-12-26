@@ -16,11 +16,13 @@ $whitegold : #f1e5c3;
     float: right;
     color: $gold;
     font-size: 1.3em;
+    z-index: 1001;
     }
 
   .dropdown-menu {
     top: 20px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
+    z-index: 1001;
   }
 
   .dropdown-menu > li > a {
@@ -32,11 +34,12 @@ $whitegold : #f1e5c3;
     color: $gold;
     white-space: nowrap;
     font-family: 'Raleway', sans-serif;
+    z-index: 1001;
 }
 
   .dropdown-menu li > a > i {
-    font-size: 0.8em;
     margin-right: 10px;
+    z-index: 1001;
 }
 
   .nav-right {
