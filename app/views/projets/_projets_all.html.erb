@@ -1,6 +1,7 @@
 <% @projets.each do |projet| %>
   <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
     <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path projet.photo.path %>')">
+    <%= link_to "", projet_path(projet.id), class: "card-link" %>
       <div class="title">
         <% if projet.title.chars.count > 25 %>
         <h3><%=projet.title.chars.take(22).join + "..."  %></h3>
@@ -8,13 +9,6 @@
         <h3><%=projet.title %></h3>
         <%end%>
       </div>
-      <div class="city">
-      <h3><%=projet.city %></h3>
-      </div>
-      <div class="date">
-      <p><%=projet.created_at.strftime("%m/%d/%Y")%></p>
-      </div>
-      <%= link_to "voir", projet_path(projet.id) %>
     </div>
   </div>
 <% end %>

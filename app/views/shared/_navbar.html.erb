@@ -2,7 +2,7 @@
   <%= link_to root_path, class: "logo-head" do %>
     <%= image_tag "Logosanstexte.png" %>
   <% end %></a>
-    <nav>
+    <div class="nav-right hidden-xs">
       <%= link_to projets_path do %>
         <i class="fa fa-book"></i> <%= t ".", default: "Projets" %>
       <% end %>
@@ -15,6 +15,24 @@
       <%= link_to new_contact_path do %>
         <i class="fa fa-envelope"></i> <%= t ".", default: "Contact" %>
       <% end %>
-    <nav>
+    </div>
+    <div class="dropdown visible-xs">
+      <i class="fa fa-bars dropdown-toggle" id="menu-dropdown" data-toggle="dropdown"
+       aria-expended="true" aria-haspopup="true"></i>
+       <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-dropdown">
+       <li><%= link_to projets_path do %>
+        <i class="fa fa-book"></i> <%= t ".", default: "Projets" %>
+      <% end %></li>
+       <li><%= link_to prestations_path do %>
+        <i class="fa fa-paper-plane"></i> <%= t ".", default: "Préstations" %>
+      <% end %></li>
+       <li><%= link_to philosophie_path do %>
+        <i class="fa fa-spinner"></i> <%= t ".", default: "Philosophie" %>
+      <% end %></li>
+       <li><%= link_to new_contact_path do %>
+        <i class="fa fa-envelope"></i> <%= t ".", default: "Contact" %>
+      <% end %></li>
+       </ul>
+    </div>
 </header>
 </div>

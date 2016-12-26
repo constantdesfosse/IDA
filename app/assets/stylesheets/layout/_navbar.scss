@@ -11,7 +11,35 @@ $whitegold : #f1e5c3;
     width: 50px;
     margin-top: -27px;
   }
-  nav {
+
+  #menu-dropdown {
+    float: right;
+    color: $gold;
+    font-size: 1.3em;
+    }
+
+  .dropdown-menu {
+    top: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
+  }
+
+  .dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.4;
+    color: $gold;
+    white-space: nowrap;
+    font-family: 'Raleway', sans-serif;
+}
+
+  .dropdown-menu li > a > i {
+    font-size: 0.8em;
+    margin-right: 10px;
+}
+
+  .nav-right {
     float: right;
     margin-top: -12px;
     a {
