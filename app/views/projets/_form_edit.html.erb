@@ -13,7 +13,8 @@
     <%= f.input :title, label: "Titre du projet", input_html: { placeholder: "Ocean view..." } %>
     <%= f.input :description, label: "Description du projet", input_html: { placeholder: "Situé à La Baule, cette maison..." } %>
     <%= f.input :city, label: "Ville du projet", input_html: { placeholder: "La Baule" } %>
-    <%= f.input :photo, as: :attachinary %>
+    <%= f.input :vignette, label: "Vignette du projet", as: :attachinary %>
+    <%= f.input :photos, label: "Photos du projet", as: :attachinary %>
     <%= f.button :submit, 'Mettre à jour', :class=> "btn-send" %>
     <% end %>
 
