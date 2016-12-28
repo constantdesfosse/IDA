@@ -4,26 +4,34 @@ $whitegold : #f1e5c3;
 
 .container {
   min-height: calc(100vh - 162px);
-  text-align: center;
-  padding: 30px;
-  max-width: 100%;
-  margin: 0 auto;
-
-
   & h3 {
     margin-bottom: 5%;
   }
+  & img {
+    width: 365px;
+    height: 270px;
+    margin-bottom: 3px;
+    margin-left: 0px;
+    margin-right: -1px;
+  }
 }
-
 
 abbr[title="required"] {
   display: none;
 }
 
-.btn-send {
-  border-style: 1px solid;
-  border-color: $whitegold;
-  font-family: 'Raleway', sans-serif;
+.col {
+  padding: 0px;
+}
+
+
+.card {
+  width: 365px;
+  height: 270px;
+  margin-bottom: 3px;
+  margin-left: 4px;
+  margin-right: -1px;
+  background-color: red;
 }
 
 .form-control {
@@ -37,75 +45,62 @@ label {
 }
 
 
-.card {
-  position: relative;
-  color: white;
+.card-link {
   width: 365px;
   height: 270px;
-  background-size: cover;
-  background-position: center;
+  margin-bottom: 3px;
+  margin-left: 4px;
+  margin-right: -1px;
+  z-index: 999;
+}
+
+.title {
+  padding-right: 22px;
+  color: white;
+  width: 100%;
+  position: absolute;
+  top: 100px;
   font-family: 'Raleway', sans-serif;
-  margin-bottom: 2px;
-  &:hover {
-    .title {
-      transform: scale(1.2);
-    }
-  }
-
-
-
-  .card-link {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-  }
-
-  .title {
-    width: 100%;
-    position: absolute;
-    top: 100px;
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    transition: 1.2s;
-    & h3 {
-      font-size: 20px;
-    }
+  text-transform: uppercase;
+  transition: 1.2s;
+  & h3 {
+    font-size: 20px;
   }
 }
 
-.no-gutter > [class*='col-'] {
-    padding-right:0;
-    padding-left:0;
-}
+// @media (min-width: 768px) {
+//     .container-projet{
+//         width: 764px;
+//     }
+// }
 
-@media (min-width: 768px) {
-    .container{
-        width: 764px;
-    }
-}
+// @media (max-width: 768px) {
+//     .container-projet {
+//       & .card {
+//         transition: 1.2s;
+//         width: 335px;
+//         height: 245px;
+//       }
+//     }
+// }
 
-@media (max-width: 768px) {
-    .card {
-      width: 335px;
-      height: 245px;
-    }
-}
+// @media (max-width: 768px) {
+//     .title {
+//       padding-right: 32px;
+//     }
+// }
 
 
-@media (min-width: 992px) {
-    .container {
-        width: 765px;
-    }
-}
-@media (min-width: 1200px) {
-    .container {
-        width: 1131px;
-    }
-}
+// @media (min-width: 992px) {
+//     .container-projet {
+//         width: 765px;
+//     }
+// }
+// @media (min-width: 1200px) {
+//     .container-projet {
+//         width: 1131px;
+//     }
+// }
 
 
 

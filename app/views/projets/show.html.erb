@@ -1,11 +1,19 @@
-<div class="container">
+<div class="banner_show_projet" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @projet.vignette.path %>')">
   <h1><%= @projet.title %></h1>
-  <p><%= @projet.description %></p>
-  <p><%= @projet.city %></p>
+</div>
 
-  <%= link_to "Editer", edit_projet_path(@projet) %>
-  <%= link_to "Effacer", projet_path(@projet), method: :delete, data: { confirm: "Anthony ? T'es sur de vouloir l'effacer ?"} %>
-  <% @projet.photos.each do |photos| %>
-  <%= cl_image_tag photos.path, width: 300, height: 200, crop: :fill %>
-<% end %>
+<p><% @projet.city %></p>
+
+<%= link_to "Editer", edit_projet_path(@projet) %>
+<%= link_to "Effacer", projet_path(@projet), method: :delete, data: { confirm: "Etes vous sur de vouloir l'effacer ?"} %>
+
+<div class="container">
+  <div class="row">
+    <div class="wrapper">
+      <p><%= @projet.description %></p>
+        <% @projet.photos.each do |photos| %>
+            <%= cl_image_tag photos.path, width: 300, height: 200, crop: :fill %>
+        <% end %>
+    </div>
+  </div>
 </div>
