@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'prestations' => 'pages#prestations'
   get 'philosophie' => 'pages#philosophie'
 
+  get '*path' => redirect('/')
+
   mount Attachinary::Engine => "/attachinary"
 
   # The priority is based upon order of creation: first created -> highest priority.

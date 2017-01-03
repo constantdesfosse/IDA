@@ -2,20 +2,22 @@
   <h1><%= @projet.title %></h1>
 </div>
 
-<p><% @projet.city %></p>
-
-<%= link_to "Editer", edit_projet_path(@projet) %>
-<%= link_to "Effacer", projet_path(@projet), method: :delete, data: { confirm: "Etes vous sur de vouloir l'effacer ?"} %>
-
 <div class="container">
   <div class="row">
     <div class="wrapper">
-      <p><%= @projet.description %></p>
-        <% @projet.photos.each do |photos| %>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-            <%= cl_image_tag photos.path, width: 300, height: 200, crop: :fill %>
-          </div>
+      <div class="new">
+        <% if user_signed_in? %>
+          <%= link_to "Editer", edit_projet_path(@projet), class: 'btn btn-success' %>
+          <%= link_to "Effacer", projet_path(@projet), class: 'btn btn-danger', method: :delete, data: { confirm: "Etes vous sur de vouloir l'effacer ?"} %>
         <% end %>
+      </div>
+      <p><%= @projet.city %></p>
+      <p><%= @projet.description %></p>
+      <% @projet.photos.each do |photos| %>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <%= cl_image_tag photos.path, width: 300, height: 200, crop: :fill %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

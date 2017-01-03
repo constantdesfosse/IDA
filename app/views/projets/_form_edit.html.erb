@@ -1,4 +1,4 @@
-<h3>Editer le projet "<%= @projet.title %>"</h3>
+<h3>Editer le projet : <%= @projet.title %> </h3>
   <% if @projet.errors.any? %>
   <ul>
     <%@projet.errors.full_messages.each do |message| %>

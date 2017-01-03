@@ -15,6 +15,11 @@
       <%= link_to new_contact_path do %>
         <i class="fa fa-envelope"></i> <%= t ".", default: "Contact" %>
       <% end %>
+      <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Deconnexion" %>
+      <% end %>
+      <% end %>
     </div>
     <div class="dropdown visible-xs">
       <i class="fa fa-bars dropdown-toggle" id="menu-dropdown" data-toggle="dropdown"
@@ -32,6 +37,11 @@
        <li><%= link_to new_contact_path do %>
         <i class="fa fa-envelope"></i> <%= t ".", default: "Contact" %>
       <% end %></li>
+      <% if user_signed_in? %>
+      <li><%= link_to destroy_user_session_path, method: :delete do %>
+        <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Deconnexion" %>
+      <% end %></li>
+      <% end %>
        </ul>
     </div>
 </header>
