@@ -15,7 +15,7 @@ $whitegold : #f1e5c3;
   #menu-dropdown {
     float: right;
     color: $gold;
-    font-size: 1.3em;
+    font-size: 0.83em;
     z-index: 1001;
     }
 
@@ -33,7 +33,7 @@ $whitegold : #f1e5c3;
     line-height: 1.4;
     color: $gold;
     white-space: nowrap;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Dosis', sans-serif;
     z-index: 1001;
 }
 
@@ -47,9 +47,9 @@ $whitegold : #f1e5c3;
     margin-top: -12px;
     a {
       color: $gold;
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Dosis', sans-serif;
       text-transform: uppercase;
-      font-size: .8em;
+      font-size: .83em;
       text-decoration: none;
       transition: 1s;
       margin: 0 1rem;

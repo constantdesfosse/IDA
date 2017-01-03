@@ -1,5 +1,6 @@
 <div class="banner_show_projet" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @projet.vignette.path %>')">
   <h1><%= @projet.title %></h1>
+  <h5><%= @projet.city %></h5>
 </div>
 
 <div class="container">
@@ -11,8 +12,13 @@
           <%= link_to "Effacer", projet_path(@projet), class: 'btn btn-danger', method: :delete, data: { confirm: "Etes vous sur de vouloir l'effacer ?"} %>
         <% end %>
       </div>
-      <p><%= @projet.city %></p>
-      <p><%= @projet.description %></p>
+      <!-- <div class="infos">
+        <p>Nom du projet : <%= @projet.title %></p>
+        <p>Ville : <%= @projet.city %></p>
+      </div> -->
+      <div class="description">
+      <p>Description : <%= @projet.description %></p>
+      </div>
       <% @projet.photos.each do |photos| %>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
           <%= cl_image_tag photos.path, width: 300, height: 200, crop: :fill %>
