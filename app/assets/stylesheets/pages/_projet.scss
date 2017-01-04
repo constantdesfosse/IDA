@@ -70,11 +70,6 @@ label {
   }
 }
 
-// @media (min-width: 768px) {
-//     .container-projet{
-//         width: 764px;
-//     }
-// }
 
 @media (max-width: 768px) {
     .container{
@@ -89,50 +84,69 @@ label {
   padding: 20px;
   padding-top: 0px;
 }
-// @media (max-width: 768px) {
-//     .title {
-//       padding-right: 32px;
-//     }
-// }
 
 
-// @media (min-width: 992px) {
-//     .container-projet {
-//         width: 765px;
-//     }
-// }
-// @media (min-width: 1200px) {
-//     .container-projet {
-//         width: 1131px;
-//     }
-// }
+@media (max-width: 1200px) and (min-width: 992px) {
+  .col-md-6 {
+      width: 39%;
+      padding-left: 109px;
+  }
+}
 
-// @media (min-width: 1200px) {
-//   .col-lg-4 {
-//       width: 32.2%;
-//       padding-left: 20px;
-//   }
-// }
+@media (min-width: 1200px) {
+  .col-lg-4 {
+      width: 32.333333%;
+      padding-left: 23px;
+  }
+}
 
-// @media (max-width: 768px) {
-//   .col-xs-12 {
-//       width: 98%;
-//   }
-// }
+@media (max-width: 992px) and (min-width: 768px) {
+  .col-sm-6 {
+      width: 50%;
+      padding-left: 0px;
+  }
+}
 
-// @media (max-width: 1200px) {
-//   .col-md-6 {
-//       width: 39%;
-//       padding-left: 105px;
-//   }
-// }
-
-// @media (max-width: 992px) {
-//   .col-sm-6 {
-//       width: 39%;
-//       padding-left: 105px;
-//   }
-// }
+@media (max-width: 768px) {
+  .col-xs-12 {
+    width: 100%;
+    padding-left: 8px;
+  }
+}
 
 
+//// Atachinary container ////
 
+.attachinary_container {
+  img {
+    padding-top: 15px;
+    box-shadow: none;
+    width: 250px;
+    height: 200px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none;
+    transition: none;
+    text-decoration: none;
+  }
+
+  li {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.form-group.attachinary.optional.projet_vignette {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-group.attachinary.optional.projet_photos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
