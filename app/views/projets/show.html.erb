@@ -21,14 +21,16 @@
       </div>
       <% @projet.photos.each do |photos| %>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-          <%= link_to cl_image_tag(photos.path), cl_image_path(photos.path), :rel => "lightbox" %>
+          <%= link_to cl_image_tag(photos.path), cl_image_path(photos.path), :rel => "lightbox", data: { lightbox: "set" } %>
         </div>
       <% end %>
     </div>
   </div>
 </div>
 
-
+<% @projet.photos do |photos| %>
+    <%= link_to(image_tag(attachment_url(photo, :image, :fit, 100, 100, format: 'jpg')), attachment_url(photo, :image, :fit, 500, 500, format: 'jpg'), data: { lightbox: "example-set", title: photo.name }) %>
+  <% end %>
 
 
 
