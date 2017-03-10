@@ -12,7 +12,7 @@
     </div>
     <% @projets.each do |projet| %>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-          <%= link_to projet_path(projet.id), class: "card-link" do %>
+          <%= link_to projet_path(projet.friendly_id), class: "card-link" do %>
             <%= cl_image_tag projet.vignette.path, class: "imgprojet" %>
               <div class="title">
               <% if projet.title.chars.count > 25 %>

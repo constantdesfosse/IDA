@@ -42,10 +42,10 @@ class ProjetsController < ApplicationController
   private
 
   def projet_params
-    params.require(:projet).permit(:title, :city, :description, :vignette, photos: [])
+    params.require(:projet).permit(:title, :city, :description, :vignette, :slug, photos: [])
   end
 
   def find_projet
-    @projet = Projet.find(params[:id])
+    @projet = Projet.friendly.find(params[:id])
   end
 end
