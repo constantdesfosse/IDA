@@ -4,7 +4,14 @@ $whitegold : #f1e5c3;
 
 #main-navigation {
   padding: 2.5em 5%;
-  border-bottom: 1px solid $whitegold;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 10px;
 
   .logo-head img {
     float: left;

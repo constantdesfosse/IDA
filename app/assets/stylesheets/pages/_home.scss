@@ -3,7 +3,8 @@ $darkgrey : #505050;
 $whitegold : #f1e5c3;
 
 .wrapper-home {
-  height: calc(100vh - 81px);
+  position: relative;
+  height: 100vh;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -20,19 +21,16 @@ html, body {
   height: 100%;
 }
 
-.home-icon {
-  margin: 50px 0 50px 0;
-  & i {
-    font-size: 8rem;
-    padding-bottom: 30px;
-  }
-
-  & p {
-  font-family: 'Raleway', sans-serif;
-  color: $gold;
-  text-align: center;
+.arrow-down {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+   & i {
+  font-size: 20px;
+  color: white;
   }
 }
+
 
 
 

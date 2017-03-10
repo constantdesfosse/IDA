@@ -2,36 +2,28 @@
   <div class="logo-home">
     <%= image_tag 'logo-home.png' %>
   </div>
+    <div class="arrow-down">
+      <i class="fa fa-arrow-down" aria-hidden="true"></i>
+    </div>
 </div>
 
-<!-- <div class="container">
+<div class="container">
   <div class="row">
     <div class="wrapper">
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-          <div class="home-icon">
-      <i class="fa fa-cubes" aria-hidden="true" style="color: #70B2CC"></i>
-      <p>IDA conçoit et réalise tous vos projets de neuf, de rénovation et d'extension.</p>
-      </div>
-      </div>
-
-<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-
-      <div class="home-icon">
-      <i class="fa fa-rocket" aria-hidden="true" style="color: #70ccaa"></i>
-      <p>IDA vous accompagne en matière de décoration, ameublement et aménagements extérieurs.</p>
-      </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-
-      <div class="home-icon">
-
-      <i class="fa fa-map-marker" aria-hidden="true" style="color: #cc7070"></i>
-      <p>Situé à La Baule - Escoublac, IDA exerce ses missions sur l'ensemble de la Loire - Atlantique.</p>
-
-      </div>
-          </div>
-
+    <% @projets.each do |projet| %>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <%= link_to projet_path(projet.friendly_id), class: "card-link" do %>
+            <%= cl_image_tag projet.vignette.path, class: "imgprojet" %>
+              <div class="title">
+              <% if projet.title.chars.count > 25 %>
+                <h3><%=projet.title.chars.take(20).join + "..."  %></h3>
+              <% else %>
+                <h3><%=projet.title %></h3>
+              <% end %>
+            </div>
+            <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
-</div> -->
+</div>
