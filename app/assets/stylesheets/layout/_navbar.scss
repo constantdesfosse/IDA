@@ -20,9 +20,11 @@ $whitegold : #f1e5c3;
   }
 
   #menu-dropdown {
+    position: relative;
+    top: -11px;
     float: right;
     color: $gold;
-    font-size: 0.83em;
+    font-size: 1.5em;
     z-index: 1001;
     }
 
