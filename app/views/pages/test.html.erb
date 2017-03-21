@@ -1,20 +1,19 @@
 <div class="banner_pages" style="background-image: url(<%= image_path 'home1.jpg' %>)">
-  <h1>Projets</h1>
+  <h1>Test projets</h1>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="wrapper">
-      <div class="new">
-        <% if user_signed_in? %>
-          <%= link_to "Nouveau Projet", new_projet_path, class: 'btn btn-success' %>
-        <% end %>
-      </div>
+    <div class="new">
+      <% if user_signed_in? %>
+        <%= link_to "Nouveau Projet", new_projet_path, class: 'btn btn-success' %>
+      <% end %>
+    </div>
       <% @projets.each do |projet| %>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
           <%= link_to projet_path(projet.friendly_id), class: "card-link" do %>
             <div class="square-test" style="background-image: url(<%= cl_image_path(projet.vignette.path) %>)">
-              <div class="hover">
               <div class="title-test">
                 <% if projet.title.chars.count > 25 %>
                   <h3><%=projet.title.chars.take(20).join + "..."  %></h3>
@@ -23,11 +22,9 @@
                 <% end %>
               </div>
             </div>
-            </div>
           <% end %>
         </div>
       <% end %>
     </div>
   </div>
 </div>
-

@@ -10,4 +10,13 @@ class Projet < ActiveRecord::Base
 
   has_attachment :vignette
   has_attachments :photos, maximum: 10
+
+  def next
+    Projet.where(["created_at < ?", created_at]).last
+  end
+
+  def previous
+    Projet.where(["created_at > ?", created_at]).last
+  end
+
 end

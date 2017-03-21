@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :prestations, :philosophie ]
+  skip_before_action :authenticate_user!, only: [ :home, :prestations, :philosophie, :test ]
 
   def home
     @projets = Projet.all.order(created_at: :desc)
@@ -15,6 +15,10 @@ class PagesController < ApplicationController
   end
 
   def contact
+  end
+
+  def test
+    @projets = Projet.all.order(created_at: :desc)
   end
 
 end

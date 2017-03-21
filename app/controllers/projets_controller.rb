@@ -21,6 +21,7 @@ class ProjetsController < ApplicationController
   end
 
   def show
+    @projets = Projet.all.order(created_at: :desc)
   end
 
   def edit

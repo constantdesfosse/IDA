@@ -15,6 +15,19 @@ $whitegold : #f1e5c3;
 .wrapper {
   min-height: 100%;
   margin-bottom: -162px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  overflow: auto;
+  margin: 0 auto;
+  & h1 {
+    color: #505050;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
 }
 
 html, body {

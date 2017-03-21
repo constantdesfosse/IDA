@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'projets' => 'pages#projets'
   get 'prestations' => 'pages#prestations'
   get 'philosophie' => 'pages#philosophie'
+  get 'test' => 'pages#test'
 
   get '*path' => redirect('/')
 
