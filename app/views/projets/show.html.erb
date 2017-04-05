@@ -21,7 +21,7 @@
       </div>
       <% @projet.photos.each do |photos| %>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-          <div class="square-test" style="background-image: url(<% cl_image_path(photos.path) %>)">
+          <div class="square-test-show" style="background-image: url(<% cl_image_path(photos.path) %>)">
             <%= link_to cl_image_tag(photos.path), cl_image_path(photos.path), :rel => "lightbox", data: { lightbox: "set", title: @projet.title } %>
           </div>
         </div>

@@ -1,13 +1,16 @@
-.square-test {
+.square-test-home {
   width: 100%;
   height: 270px;
   background-size: cover;
   background-position: center;
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1);
-  margin-bottom: 11px;
+  margin-bottom: -15px;
   border: solid 5px white;
-  position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 
   & img {
     width: 100%;
@@ -15,39 +18,54 @@
   }
 }
 
-// .container img.wide {
-//     max-width: 100%;
-//     max-height: 100%;
-//     height: auto;
-// }
-// .container img.tall {
-//     max-height: 100%;
-//     max-width: 100%;
-//     width: auto;
-// }​
-
-.title-test {
-  margin: 0 auto;
-  color: white;
+.square-test-show {
   width: 100%;
-  position: absolute;
-  top: 176px;
-  text-transform: uppercase;
+  height: 270px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  border: solid 5px white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  border-bottom: 5px solid white;
-  & h3 {
-    font-family: 'Dosis', sans-serif;
-    font-size: 25px;
-    float: left;
-    margin-bottom: 0px;
-    margin-left: 5px;
+
+  & img {
+    width: 100%;
+    transform: scale(1.4);
   }
 }
 
-.col-xs-12 {
-  //margin-bottom: -26px;
+.title-test {
+  color: white;
+  text-transform: uppercase;
+  & h3 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 25px;
+    margin: 0px;
+    text-decoration: none;
+  }
+}
+
+.card-link {
+  width: 365px;
+  height: 270px;
+  margin-bottom: 3px;
+  margin-left: 4px;
+  margin-right: -1px;
+  z-index: 999;
+  text-decoration: none;
+  & :hover {
+    text-decoration: none;
+  }
 }
 
 .img-responsive {
   margin:0 auto;
+}
+
+a:link {
+  text-decoration: none;
 }

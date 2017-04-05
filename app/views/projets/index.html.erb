@@ -13,8 +13,7 @@
       <% @projets.each do |projet| %>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
           <%= link_to projet_path(projet.friendly_id), class: "card-link" do %>
-            <div class="square-test" style="background-image: url(<%= cl_image_path(projet.vignette.path) %>)">
-              <div class="hover">
+            <div class="square-test-home" style="background-image: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.2)), url(<%= cl_image_path(projet.vignette.path) %>)">
               <div class="title-test">
                 <% if projet.title.chars.count > 25 %>
                   <h3><%=projet.title.chars.take(20).join + "..."  %></h3>
@@ -22,7 +21,6 @@
                   <h3><%=projet.title %></h3>
                 <% end %>
               </div>
-            </div>
             </div>
           <% end %>
         </div>
