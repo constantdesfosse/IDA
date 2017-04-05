@@ -1,4 +1,4 @@
-$gold: #9c8e65;
+$gold: #505050;
 $darkgrey : #505050;
 $whitegold : #f1e5c3;
 
@@ -28,9 +28,10 @@ $whitegold : #f1e5c3;
 }
 
 .description {
-  text-align: justify;
+  text-align: center;
   padding-left: 15px;
   padding-right: 15px;
+  margin-top: -49px;
   p {
     font-family: 'Dosis', sans-serif;
     color: $gold;
