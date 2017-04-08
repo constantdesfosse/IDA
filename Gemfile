@@ -23,6 +23,8 @@ gem "attachinary", github: "assembler/attachinary"
 gem "jquery-fileupload-rails"
 gem "coffee-rails"
 gem 'friendly_id', '~> 5.1'
+gem 'masonry-rails', '~> 0.2.0'
+gem 'jquery-turbolinks'
 
 group :development, :test do
   gem 'binding_of_caller'
