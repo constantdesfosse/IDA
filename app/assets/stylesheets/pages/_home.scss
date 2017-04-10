@@ -12,6 +12,12 @@ $whitegold : #f1e5c3;
   justify-content: center;
 }
 
+.logo-home {
+  & img {
+    width: 280px;
+  }
+}
+
 .wrapper {
   min-height: 100%;
   margin-bottom: -162px;
