@@ -15,6 +15,7 @@
     <%= f.input :city, label: "Ville du projet", input_html: { placeholder: "La Baule" } %>
     <%= f.input :vignette, label: "Vignette du projet", as: :attachinary %>
     <%= f.input :photos, label: "Photos du projet", as: :attachinary %>
+    <%= f.input :rank, label: "Placement", input_html: { placeholder: "12..." } %>
     <%= f.button :submit, 'Mettre à jour', :class=> "btn-send" %>
     <% end %>
 

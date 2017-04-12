@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home, :prestations, :philosophie, :test ]
 
   def home
-    @projets = Projet.all.order(created_at: :desc)
+    @projets = Projet.all.order(rank: :asc)
   end
 
   def projets
@@ -18,7 +18,7 @@ class PagesController < ApplicationController
   end
 
   def test
-    @projets = Projet.all.order(created_at: :desc)
+    @projets = Projet.all.order(rank: :asc)
   end
 
 end

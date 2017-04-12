@@ -3,7 +3,7 @@ class ProjetsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
-    @projets = Projet.all.order(created_at: :desc)
+    @projets = Projet.all.order(rank: :asc)
   end
 
   def new
@@ -21,7 +21,7 @@ class ProjetsController < ApplicationController
   end
 
   def show
-    @projets = Projet.all.order(created_at: :desc)
+    @projets = Projet.all.order(rank: :asc)
   end
 
   def edit
@@ -43,7 +43,7 @@ class ProjetsController < ApplicationController
   private
 
   def projet_params
-    params.require(:projet).permit(:title, :city, :description, :vignette, :slug, photos: [])
+    params.require(:projet).permit(:title, :rank, :city, :description, :vignette, :slug, photos: [])
   end
 
   def find_projet

@@ -4,6 +4,7 @@ class Projet < ActiveRecord::Base
   validates :description, :presence => true
   validates :vignette, :presence => true
   validates :photos, :presence => true
+  validates :rank, :presence => true
 
   extend FriendlyId
   friendly_id :title, :use => :slugged
@@ -11,12 +12,12 @@ class Projet < ActiveRecord::Base
   has_attachment :vignette
   has_attachments :photos, maximum: 10
 
-  def next
-    Projet.where(["created_at < ?", created_at]).last
+   def next
+    Projet.where("rank > ?", rank).order("rank ASC").first
   end
 
   def previous
-    Projet.where(["created_at > ?", created_at]).last
+    Projet.where("rank < ?", rank).order("rank DESC").first
   end
 
 end
