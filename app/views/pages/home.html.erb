@@ -10,9 +10,77 @@
 <div class="container">
   <div class="row">
     <div class="wrapper">
+
+
+
+      <div class="projet-home">
+
+        <div class="box-home">
+          <div class="pic-projet">
+            <% @projets.each do |projet| %>
+              <% if projet.rank == 1 %>
+                <%= cl_image_tag(projet.vignette.path) %>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="number-projet">
+            <% @projets.each do |projet| %>
+              <% if projet.rank == 1 %>
+                <h3><%= projet.rank %></h3>
+                <% projet.description %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+        <div class="box-home">
+          <div class="pic-projet">
+            <% @projets.each do |projet| %>
+              <% if projet.rank == 2 %>
+                <%= cl_image_tag(projet.vignette.path) %>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="number-projet">
+            <% @projets.each do |projet| %>
+              <% if projet.rank == 2 %>
+                <h3><%= projet.rank %></h3>
+                <% projet.description %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+        <div class="box-home">
+          <div class="pic-projet">
+            <% @projets.each do |projet| %>
+              <% if projet.rank == 3 %>
+                <%= cl_image_tag(projet.vignette.path) %>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="number-projet">
+            <% @projets.each do |projet| %>
+              <% if projet.rank == 3 %>
+                <h3><%= projet.rank %></h3>
+                <% projet.description %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
       <% @projets.each do |projet| %>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-          <%= link_to projet_path(projet.friendly_id), class: "card-link" do %>
+        <% if projet.rank <= 3 %>
+          <% link_to projet_path(projet.friendly_id), class: "card-link" do %>
             <div class="square-test-home" style="background-image: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.2)), url(<%= cl_image_path(projet.vignette.path) %>)">
               <div class="title-test">
                 <%projet.rank %>
@@ -23,6 +91,7 @@
                 <% end %>
               </div>
             </div>
+          <% end %>
           <% end %>
         </div>
       <% end %>
