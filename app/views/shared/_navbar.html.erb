@@ -6,14 +6,14 @@
       <%= link_to projets_path do %>
         <i class="fa fa-book"></i> <%= t ".", default: "Projets" %>
       <% end %>
-      <%= link_to prestations_path do %>
-        <i class="fa fa-paper-plane"></i> <%= t ".", default: "Préstations" %>
+      <%= link_to services_path do %>
+        <i class="fa fa-handshake-o"></i> <%= t ".", default: "Services" %>
       <% end %>
-       <%= link_to philosophie_path do %>
-        <i class="fa fa-spinner"></i> <%= t ".", default: "Philosophie" %>
+       <%= link_to agence_path do %>
+        <i class="fa fa-spinner"></i> <%= t ".", default: "Agence" %>
       <% end %>
       <%= link_to new_contact_path do %>
-        <i class="fa fa-envelope"></i> <%= t ".", default: "Contact" %>
+        <i class="fa fa-paper-plane"></i> <%= t ".", default: "Contact" %>
       <% end %>
       <% if user_signed_in? %>
       <%= link_to destroy_user_session_path, method: :delete do %>
@@ -28,14 +28,14 @@
        <li><%= link_to projets_path do %>
         <i class="fa fa-book"></i> <%= t ".", default: "Projets" %>
       <% end %></li>
-       <li><%= link_to prestations_path do %>
-        <i class="fa fa-paper-plane"></i> <%= t ".", default: "Préstations" %>
+       <li><%= link_to services_path do %>
+        <i class="fa fa-handshake-o"></i> <%= t ".", default: "Services" %>
       <% end %></li>
-       <li><%= link_to philosophie_path do %>
-        <i class="fa fa-spinner"></i> <%= t ".", default: "Philosophie" %>
+       <li><%= link_to agence_path do %>
+        <i class="fa fa-spinner"></i> <%= t ".", default: "Agence" %>
       <% end %></li>
        <li><%= link_to new_contact_path do %>
-        <i class="fa fa-envelope"></i> <%= t ".", default: "Contact" %>
+        <i class="fa fa-paper-plane"></i> <%= t ".", default: "Contact" %>
       <% end %></li>
       <% if user_signed_in? %>
       <li><%= link_to destroy_user_session_path, method: :delete do %>

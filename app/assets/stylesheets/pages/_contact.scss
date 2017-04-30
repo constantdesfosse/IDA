@@ -1,6 +1,5 @@
 $gold: #9c8e65;
 $darkgrey : #505050;
-$whitegold : #f1e5c3;
 
 .container-contact {
   padding: 5%;
@@ -20,7 +19,7 @@ abbr[title="required"] {
 
 .btn-send {
   border-style: 1px solid;
-  border-color: $whitegold;
+  border-color: #EAEAEA;
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   font-size: 0.8em;
@@ -35,7 +34,7 @@ abbr[title="required"] {
 }
 
 .form-control {
-  border-color: $whitegold;
+  border-color: #EAEAEA;
   box-shadow: none;
   -webkit-appearance: none;
   font-family: 'Raleway', sans-serif;

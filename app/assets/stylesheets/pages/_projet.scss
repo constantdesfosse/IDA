@@ -3,7 +3,7 @@ $darkgrey : #505050;
 $whitegold : #f1e5c3;
 
 .container {
-  min-height: calc(100vh - 162px);
+  // min-height: calc(100vh - 162px);
   & h3 {
     margin-bottom: 5%;
   }
@@ -23,7 +23,7 @@ abbr[title="required"] {
 }
 
 .form-control {
-  border-color: $whitegold;
+  border-color: #EAEAEA;
   box-shadow: none;
 }
 

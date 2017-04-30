@@ -8,9 +8,8 @@ Rails.application.routes.draw do
   resources :projets
 
   get 'projets' => 'pages#projets'
-  get 'prestations' => 'pages#prestations'
-  get 'philosophie' => 'pages#philosophie'
-  get 'test' => 'pages#test'
+  get 'services' => 'pages#services'
+  get 'agence' => 'pages#agence'
 
   get '*path' => redirect('/')
 

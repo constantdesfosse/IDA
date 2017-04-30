@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :prestations, :philosophie, :test ]
+  skip_before_action :authenticate_user!, only: [ :home, :services, :agence]
 
   def home
     @projets = Projet.all.order(rank: :asc)
@@ -8,17 +8,13 @@ class PagesController < ApplicationController
   def projets
   end
 
-  def prestations
+  def services
   end
 
-  def philosophie
+  def agence
   end
 
   def contact
-  end
-
-  def test
-    @projets = Projet.all.order(rank: :asc)
   end
 
 end
