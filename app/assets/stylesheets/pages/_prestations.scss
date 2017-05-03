@@ -2,19 +2,23 @@ $liliwhite : #EAEAEA;
 
 
 .box-pro {
-padding: 40px;
-// border: solid 1px;
+// background-color: #fefefe;
+padding: 20px;
+border: solid 1px;
 border-color: $liliwhite;
 width:100%;
 margin-bottom: 30px;
+min-height: 583.08px;
 & h4 {
   color: #52BBB4
 }
 }
 
 .box-particuliers {
-padding: 40px;
-// border: solid 1px;
+// background-color: #fefefe;
+min-height: 583.08px;
+padding: 20px;
+border: solid 1px;
 border-color: $liliwhite;
 width:100%;
 & h4 {
@@ -28,4 +32,8 @@ width:100%;
 
 .content-particuliers {
   text-align: left;
+}
+
+.container p {
+
 }

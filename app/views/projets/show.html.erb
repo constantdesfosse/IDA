@@ -22,7 +22,7 @@
       <div id="brick">
         <% @projet.photos.each do |photos| %>
         <div class="box">
-          <%= link_to cl_image_tag(photos.path), cl_image_path(photos.path), :rel => "lightbox", data: { lightbox: "set", title: @projet.title } %>
+          <%= link_to cl_image_tag(photos.path), cl_image_path(photos.path), :rel => "lightbox", data: { lightbox: "set", title: @projet.title} %>
         </div>
       <% end %>
       </div>
@@ -55,16 +55,16 @@
 
     <div class="box-prev-next" style="margin-top: 40px">
         <% if @projet.previous %>
-          <%= link_to "Précédent", @projet.previous, :class => 'btn-voir'%>
+          <%= link_to "< Projet Précédent", @projet.previous, :class => 'btn-voir'%>
         <%end%>
         <% if @projet.previous == nil %>
-          <%= link_to "Précédent", @projet.last, :class => 'btn-voir'%>
+          <%= link_to "< Projet précédent", @projet.last, :class => 'btn-voir'%>
         <%end%>
         <% if @projet.next %>
-          <%= link_to "Suivant", @projet.next, :class => 'btn-voir'%>
+          <%= link_to "Projet Suivant >", @projet.next, :class => 'btn-voir'%>
         <%end%>
          <% if @projet.next == nil %>
-          <%= link_to "Suivant", @projet.first, :class => 'btn-voir'%>
+          <%= link_to "Projet Suivant >", @projet.first, :class => 'btn-voir'%>
         <%end%>
     </div>
 
