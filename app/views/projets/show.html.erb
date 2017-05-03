@@ -2,10 +2,6 @@
   <% @projet.rank %>
   <h1><%= @projet.title %></h1>
   <h5><%= @projet.city %></h5>
-  <div class="pn-project">
-    <%= link_to("", @projet.previous, class: "fa fa-chevron-left") if @projet.previous %>
-    <%= link_to("", @projet.next, class: "fa fa-chevron-right") if @projet.next %>
-  </div>
 </div>
 
 <div class="container">
@@ -31,6 +27,46 @@
       <% end %>
       </div>
 
+      <div class="next">
+        <% if @projet.next %>
+          <% link_to @projet.next do %>
+            <%= cl_image_tag(@projet.next.vignette.path) %>
+          <% end %>
+        <%end%>
+        <% if @projet.next == nil %>
+          <% link_to @projet.first do %>
+            <%= cl_image_tag(@projet.first.vignette.path) %>
+          <% end %>
+        <%end%>
+      </div>
+
+    <div class="previous">
+      <% if @projet.previous %>
+        <% link_to @projet.previous do %>
+          <%= cl_image_tag(@projet.previous.vignette.path) %>
+        <% end %>
+      <%end%>
+      <% if @projet.previous == nil %>
+        <% link_to @projet.last do %>
+          <%= cl_image_tag(@projet.last.vignette.path) %>
+        <% end %>
+      <%end%>
+    </div>
+
+    <div class="box-prev-next" style="margin-top: 40px">
+        <% if @projet.previous %>
+          <%= link_to "Précédent", @projet.previous, :class => 'btn-voir'%>
+        <%end%>
+        <% if @projet.previous == nil %>
+          <%= link_to "Précédent", @projet.last, :class => 'btn-voir'%>
+        <%end%>
+        <% if @projet.next %>
+          <%= link_to "Suivant", @projet.next, :class => 'btn-voir'%>
+        <%end%>
+         <% if @projet.next == nil %>
+          <%= link_to "Suivant", @projet.first, :class => 'btn-voir'%>
+        <%end%>
+    </div>
 
     </div>
   </div>

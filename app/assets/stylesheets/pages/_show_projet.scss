@@ -7,6 +7,26 @@ $whitegold : #f1e5c3;
   margin-bottom: 65px;
 }
 
+.next {
+  float: right;
+  width: 100px;
+  height: 70px;
+  overflow: hidden;
+  & img {
+    width: 100%;
+  }
+}
+
+.previous {
+  float: left;
+  width: 100px;
+  height: 70px;
+  overflow: hidden;
+  & img {
+    width: 100%;
+  }
+}
+
 .banner_show_projet {
   flex-direction: column;
   width: 100%;
@@ -85,14 +105,14 @@ $whitegold : #f1e5c3;
   }
 }
 
-.pn-project {
-  width: 100%;
-  height: 70px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // text-align: center;
-}
+// .pn-project {
+//   width: 100%;
+//   height: 70px;
+//   // display: flex;
+//   // align-items: center;
+//   // justify-content: center;
+//   // text-align: center;
+// }
 
 .fa-chevron-right {
   float: right;

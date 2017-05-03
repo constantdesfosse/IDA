@@ -20,4 +20,12 @@ class Projet < ActiveRecord::Base
     Projet.where("rank < ?", rank).order("rank DESC").first
   end
 
+  def last
+   Projet.order(rank: :asc).last()
+  end
+
+  def first
+   Projet.order(rank: :asc).first()
+  end
+
 end
