@@ -8,7 +8,7 @@
 </div>
 
 <div class="container" style="text-align: center; margin-top: 80px;">
-    <h1>Intérieur, Design & Architecture</h1>
+    <h1><strong>I</strong>ntérieur, <strong>D</strong>esign & Architecture</h1>
     <p>IDA est une agence d’architecture d’intérieure et de design qui<br> vous escorte dans vos projets personnels et professionnels, en intérieur comme en extérieur.</p>
 </div>
 
@@ -21,7 +21,7 @@
     <div class="wrapper">
         <% @projets.each do |projet| %>
           <% if projet.rank <= 3 %>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="col-xs-12 col-lg-4">
               <%= link_to projet_path(projet.friendly_id), class: "card-link" do %>
                 <div class="square-test-home" style="background-image: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.2)), url(<%= cl_image_path(projet.vignette.path) %>)">
                   <div class="title-test">
