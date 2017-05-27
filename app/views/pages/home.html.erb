@@ -7,9 +7,10 @@
     </div>
 </div>
 
-<div class="container" style="text-align: center; margin-top: 80px;">
-    <h1><strong>I</strong>ntérieur, <strong>D</strong>esign & Architecture</h1>
-    <p>IDA est une agence d’architecture d’intérieure et de design qui<br> vous escorte dans vos projets personnels et professionnels, en intérieur comme en extérieur.</p>
+<div class="container" style="text-align: center; margin-top: 50px;">
+    <h2>I D A</h2>
+    <h1><strong>I</strong>ntérieur, <strong>D</strong>esign & <strong>A</strong>rchitecture</h1>
+    <p>IDA est une agence d’architecture d’intérieur et de design qui  vous escorte dans vos projets personnels et professionnels, en intérieur comme en extérieur.</p>
 </div>
 
 <div class="banner_pages" style="background-image: url(<%= image_path 'projets.jpg' %>)";>
@@ -48,17 +49,34 @@
   <h1>L'agence</h1>
 </div>
 
-<div class="container" style="text-align: center; margin-top: 80px;center; margin-bottom: 40px">
-    <h1>Intérieur, Design & Architecture</h1>
-    <p>Fondée par Anthony GUYOT, architecte d’intérieur diplômé et en exercice depuis 2011, IDA sublime votre projet en puisant son inspiration dans les tendances, les atmosphères quotidiennes, les voyages, l’héritage des traditions mais aussi et surtout dans votre inventivité. <br>IDA vous accompagne ainsi tant dans des réalisations aux styles affirmés que dans des réalisations intemporelles.<br><br>
-Les plans, esquisses et visualisations 3D permettent d'appuyer les échanges avec la rigueur d'un support imagé. La phase de création s’achève par une visite virtuelle de votre espace, où un large choix de matériaux, d’objets et de meubles donne peu à peu vie à votre projet avant la réalisation des travaux par une équipe d’artisans soigneusement sélectionnés.
+<div class="container" style="text-align: center; margin-top: 20px; margin-bottom: 17px">
+  <div class="box-portrait" style="margin-top: 20px">
+    <%= image_tag 'portrait_anthony.jpg' %>
+  </div>
+  <p>Fondée par Anthony GUYOT, architecte d’intérieur diplômé et en exercice depuis 2011, IDA sublime votre projet en puisant son inspiration dans les tendances, les atmosphères quotidiennes, les voyages, l’héritage des traditions mais aussi et surtout dans votre inventivité. <br>IDA vous accompagne ainsi tant dans des réalisations aux styles affirmés que dans des réalisations intemporelles.
 </p>
 </div>
 <div class="container" style="text-align: center; margin-top: 0px; margin-bottom: 40px;">
     <%= link_to "En savoir plus", agence_path, :class => 'btn-voir'%>
 </div>
-<div class="map-box" style="text-align: center; margin-bottom: 40px">
-<% image_tag 'map.png' %>
+
+<div class="frame_contact" style="background-image: url(<%= image_path 'map-globe.jpg' %>)";>
+  <div class="opa" style ="z-index: 1;">
+    <%= image_tag 'opa.png' %>
+  </div>
+  <div class="content-contact" style ="z-index: 2;">
+  <span style="float: left; text-align: left;">
+    <h1>CONTACT</h1>
+    <h4>IDA / Intérieur, Désign & Architecture</h4>
+    <p>54 rue des petites filles<br>
+    44560 La Baule<br>
+    Loire - Atlantique<br>
+    France<br>
+    Tél : 02 40 34 90 45
+    </p>
+    <%= link_to "Contact", new_contact_path, :class => 'btn-contact'%>
+  </span>
+  </div>
 </div>
 
 

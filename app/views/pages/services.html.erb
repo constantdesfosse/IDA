@@ -15,7 +15,7 @@
           <h1>Particuliers</h1>
           <h4>"Neuf, rénovation, extension & Home Staging"</h4>
           <div class="content-pro" style="margin-top: 40px;"  ">
-            <h4>1. Clés en main :</h4> <p><br>Accompagnement et prise en charge de toutes les démarches créatives, administratives, de coordination de travaux et d’aménagements intérieurs,  jusqu’à la décoration dont le linge de maison et les arts de la table à votre gré.</p><br>
+            <h4>1. Clés en main :</h4> <p><br>Accompagnement et prise en charge de toutes les démarches créatives, administratives, de coordination de travaux et d’aménagements intérieurs, jusqu’à la décoration, dont le linge de maison et les arts de la table, à votre gré.</p><br>
             <h4>2. A la carte :</h4>
             <ul>
               <li>étude graphique</li>
@@ -23,6 +23,8 @@
               <li>suivi et coordination de travaux (intérieur/extérieur)</li>
               <li>conseils en décoration/modernisation d’intérieur/valorisation avant vente</li>
               <li>conseils lors d’achat sur plan</li>
+              <li>Conseils aménagements perte d’autonomie et handicap</li>
+              <li>Courtage en travaux</li>
             </ul>
 
           </div>
@@ -32,11 +34,12 @@
        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <div class="box-pro">
           <h1>Professionnels</h1>
-          <h4>"Restaurants, Concept Store & mise aux normes"</h4>
+          <h4>"Etablissements recevant du public, Concept Store & accessibilité"</h4>
 
             <div class="content-particuliers" style="margin-top: 40px;">
-              <h4>1. Accessibilité :</h4><br><p>Restaurant, bar, hôtel, boutique, espace de vente : accompagnement dans le développement de l’identité de votre espace ou création de concept-store.</p><br>
-              <h4>2. Accessibilité :</h4><br> <p>Mise en conformité de votre espace pour des personnes à mobilité réduite (Normes PMR) dans les établissements recevant du public </p><br>
+              <h4>1. Espaces de vente :</h4><br><p>Restaurant, bar, hôtel, boutique, bureau d’entreprise, ... :</br><br>
+              Accompagnement dans le développement de l’identité de votre espace ou création de concept-store.</p><br>
+              <h4>2. Personnes en situation de handicap et à mobilité réduite :</h4><br> <p>Mise en conformité de votre espace pour l’accueil de personnes à mobilité réduite (Normes PMR) dans les établissements recevant du public.</p><br>Structuration des espaces de vie des personnes avec troubles du spectre autistique,  déficience intellectuelle ou en perte d’autonomie.<br><br>
               <h4>3. Établissement medico-social :</h4><br><p>Structuration des espaces de vie des personnes avec troubles du spectre autistique et/ou déficience intellectuelle</p>
             </div>
         </div>
@@ -46,6 +49,26 @@
 </div>
 <div class="container" style="text-align: center; margin-bottom: 40px">
     <%= link_to "Voir les projets", projets_path, :class => 'btn-voir'%>
+</div>
+
+<div class="frame_contact" style="background-image: url(<%= image_path 'map-globe.jpg' %>)";>
+  <div class="opa" style ="z-index: 1;">
+    <%= image_tag 'opa.png' %>
+  </div>
+  <div class="content-contact" style ="z-index: 2;">
+  <span style="float: left; text-align: left;">
+    <h1>CONTACT</h1>
+    <h4>IDA / Intérieur, Désign & Architecture</h4>
+    <p>54 rue des petites filles<br>
+    44560 La Baule<br>
+    Loire - Atlantique<br>
+    France<br>
+    Tél : 02 40 34 90 45<br>
+    Email : idaguyot@gmail.com
+    </p>
+    <%= link_to "Contact", new_contact_path, :class => 'btn-contact'%>
+  </span>
+  </div>
 </div>
 
 
