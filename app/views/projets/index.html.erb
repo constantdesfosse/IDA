@@ -11,10 +11,10 @@
         <% end %>
       </div>
       <div class="container" style="text-align: center; margin-top: 0px; padding-top: 0px; margin-bottom: 40px">
-    <h1>Intérieur, Design & Architecture</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-</p>
-</div>
+        <h1 style="margin-top: 0px;">Intérieur, Design & Architecture</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
       <% @projets.each do |projet| %>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
           <%= link_to projet_path(projet.friendly_id), class: "card-link" do %>
@@ -35,22 +35,5 @@
   </div>
 </div>
 
-<div class="frame_contact" style="background-image: url(<%= image_path 'map-globe.jpg' %>)";>
-  <div class="opa" style ="z-index: 1;">
-    <%= image_tag 'opa.png' %>
-  </div>
-  <div class="content-contact" style ="z-index: 2;">
-  <span style="float: left; text-align: left;">
-    <h1>CONTACT</h1>
-    <h4>IDA / Intérieur, Désign & Architecture</h4>
-    <p>54 rue des petites filles<br>
-    44560 La Baule<br>
-    Loire - Atlantique<br>
-    France<br>
-    Tél : 02 40 34 90 45
-    </p>
-    <%= link_to "Contact", new_contact_path, :class => 'btn-contact'%>
-  </span>
-  </div>
-</div>
+<%= render 'shared/frame_contact' %>
 

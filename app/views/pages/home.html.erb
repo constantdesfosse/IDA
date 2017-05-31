@@ -60,24 +60,7 @@
     <%= link_to "En savoir plus", agence_path, :class => 'btn-voir'%>
 </div>
 
-<div class="frame_contact" style="background-image: url(<%= image_path 'map-globe.jpg' %>)";>
-  <div class="opa" style ="z-index: 1;">
-    <%= image_tag 'opa.png' %>
-  </div>
-  <div class="content-contact" style ="z-index: 2;">
-  <span style="float: left; text-align: left;">
-    <h1>CONTACT</h1>
-    <h4>IDA / Intérieur, Désign & Architecture</h4>
-    <p>54 rue des petites filles<br>
-    44560 La Baule<br>
-    Loire - Atlantique<br>
-    France<br>
-    Tél : 02 40 34 90 45
-    </p>
-    <%= link_to "Contact", new_contact_path, :class => 'btn-contact'%>
-  </span>
-  </div>
-</div>
+<%= render 'shared/frame_contact' %>
 
 
 

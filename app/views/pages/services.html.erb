@@ -1,15 +1,20 @@
 <div class="banner_pages" style="background-image: url(<%= image_path 'prestations.jpg' %>)">
-  <h1>Services</h1>
-</div>
-
-<div class="container" style="text-align: center; margin-top: 30px;">
-    <h1>Particuliers et professionels</h1>
-    <p>IDA est une agence d’architecture d’intérieure et de design qui vous escorte<br> dans vos projets personnels et professionnels.</p>
+  <h1>Préstations</h1>
 </div>
 
 <div class="container">
   <div class="row">
-    <div class="wrapper" style="text-align: center; padding-bottom: 0px;">
+    <div class="wrapper" style="padding-top: 0px">
+      <div class="new">
+        <% if user_signed_in? %>
+          <%= link_to "Nouveau Projet", new_projet_path, class: 'btn btn-success' %>
+        <% end %>
+      </div>
+      <div class="container" style="text-align: center; margin-top: 0px; padding-top: 0px; margin-bottom: 40px">
+        <h1 style="margin-top: 0px;">Particuliers et professionels</h1>
+        <p>IDA est une agence d’architecture d’intérieure et de design qui vous escorte<br> dans vos projets personnels et professionnels.
+        </p>
+      </div>
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <div class="box-particuliers" style="margin-bottom: 30px;">
           <h1>Particuliers</h1>
@@ -51,24 +56,6 @@
     <%= link_to "Voir les projets", projets_path, :class => 'btn-voir'%>
 </div>
 
-<div class="frame_contact" style="background-image: url(<%= image_path 'map-globe.jpg' %>)";>
-  <div class="opa" style ="z-index: 1;">
-    <%= image_tag 'opa.png' %>
-  </div>
-  <div class="content-contact" style ="z-index: 2;">
-  <span style="float: left; text-align: left;">
-    <h1>CONTACT</h1>
-    <h4>IDA / Intérieur, Désign & Architecture</h4>
-    <p>54 rue des petites filles<br>
-    44560 La Baule<br>
-    Loire - Atlantique<br>
-    France<br>
-    Tél : 02 40 34 90 45<br>
-    Email : idaguyot@gmail.com
-    </p>
-    <%= link_to "Contact", new_contact_path, :class => 'btn-contact'%>
-  </span>
-  </div>
-</div>
+<%= render 'shared/frame_contact' %>
 
 

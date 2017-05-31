@@ -35,7 +35,6 @@ $liliwhite : #EAEAEA;
   margin: 0 auto;
   & h1 {
     color: #505050;
-    font-size: 1.5em;
     margin-bottom: 20px;
     text-transform: uppercase;
   }
@@ -126,6 +125,16 @@ html, body {
   }
 }
 
+.contact_responsive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #93e3d9;
+  display: none;
+}
+
 .btn-contact {
   height: 30px;
   font-size: 13px;
@@ -142,5 +151,18 @@ html, body {
     background-color: white;
     border-color: white;
     transition: 0.5s;
+  }
+}
+
+@media (max-width: 710px) {
+  .frame_contact img {
+    display: none;
+    background-color:#00A398;
+  }
+}
+
+@media (max-width: 710px) {
+  .contact_responsive {
+    display: block;
   }
 }
