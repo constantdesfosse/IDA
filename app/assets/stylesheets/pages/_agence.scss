@@ -27,3 +27,10 @@
   margin-bottom: 20px;
   }
 }
+
+.logoagence {
+  width: 100%;
+  & img {
+    width: 250px;
+  }
+}

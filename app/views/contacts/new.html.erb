@@ -1,3 +1,7 @@
+<% content_for :meta_title, "Contact - IDA" %>
+<% content_for :meta_description, "Envoyez nous un message" %>
+<% content_for :meta_image, image_tag("contact.jpg")%>
+
 <div class="banner_pages" style="background-image: url(<%= image_path 'contact.jpg' %>)">
   <h1>Contact</h1>
 </div>
@@ -21,6 +25,26 @@
     </div>
   </div>
 </div>
-<%= render 'shared/frame_contact' %>
+
+<div class="frame_contact" style="background-image: url(<%= image_path 'map-globe.jpg' %>)";>
+  <div class="opa" style ="z-index: 1;">
+    <%= image_tag 'opa.png' %>
+  </div>
+
+  <div class="contact_responsive" style ="z-index: 2;">
+  </div>
+
+  <div class="content-contact" style ="z-index: 3;">
+  <span style="float: left; text-align: left;">
+    <h1>CONTACT</h1>
+    <h4>IDA / Intérieur, Désign & Architecture</h4>
+    <p>La Baule-Escoublac<br>
+    Pays de la Loire<br>
+    France<br>
+    Tél : +(33) 07 69 98 38 38
+    </p>
+  </span>
+  </div>
+</div>
 
 

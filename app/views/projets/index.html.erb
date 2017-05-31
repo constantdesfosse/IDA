@@ -1,4 +1,8 @@
-<div class="banner_pages" style="background-image: url(<%= image_path 'projets.jpg' %>)">
+<% content_for :meta_title, "Projets - IDA" %>
+<% content_for :meta_description, "Découvrez les projets réalisés par l'agence IDA" %>
+<% content_for :meta_image, image_tag("IDA.jpg")%>
+
+<div class="banner_pages" style="background-image: url(<%= image_path 'IDA.jpg' %>)">
   <h1>Projets</h1>
 </div>
 
@@ -12,7 +16,7 @@
       </div>
       <div class="container" style="text-align: center; margin-top: 0px; padding-top: 0px; margin-bottom: 40px">
         <h1 style="margin-top: 0px;">Intérieur, Design & Architecture</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <p>Découvrez les projets réalisés par l'agence IDA
         </p>
       </div>
       <% @projets.each do |projet| %>
