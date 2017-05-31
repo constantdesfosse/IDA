@@ -1,6 +1,6 @@
 <% content_for :meta_title, "#{@projet.title} - IDA" %>
 <% content_for :meta_description, @projet.description %>
-<% content_for :meta_image, image_path(@projet.vignette) %>
+<% content_for :meta_image, cloudinary_url(@projet.vignette.path) %>
 
 <div class="banner_show_projet" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @projet.vignette.path %>')">
   <% @projet.rank %>
